@@ -1,13 +1,13 @@
 public class StockData {
-    public double prevClose;
-    public double open;
-    public double peRatio;
-    public double currentPrice;
-    public double percentMovement;
+    public float prevClose;
+    public float open;
+    public float peRatio;
+    public float currentPrice;
+    public float percentMovement;
     public String ticker;
     public String companyName;
 
-    public StockData(double prevClose, double open, double peRatio, double currentPrice, double percentMovement, String ticker, String companyName) {
+    public StockData(float prevClose, float open, float peRatio, float currentPrice, float percentMovement, String ticker, String companyName) {
         this.prevClose = prevClose;
         this.open = open;
         this.peRatio = peRatio;
@@ -19,14 +19,12 @@ public class StockData {
 
     @Override
     public String toString() {
-        return "StockData{" +
-                "prevClose=" + prevClose +
-                ", open=" + open +
-                ", peRatio=" + peRatio +
-                ", currentPrice=" + currentPrice +
-                ", percentMovement=" + percentMovement +
-                ", ticker='" + ticker + '\'' +
-                ", companyName='" + companyName + '\'' +
-                '}';
+        return "StockData for "+ticker+":" +
+                "\nopen=" + open +
+                "\npe ratio=" + peRatio +
+                "\ncurrent price=" + currentPrice +
+                "\nmovement from open price(%)=" + percentMovement +"%"+
+                "\nTicker='" + ticker + '\'' +
+                "\ncompanyName='" + companyName + "\'\n";
     }
 }
