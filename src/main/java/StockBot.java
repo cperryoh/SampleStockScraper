@@ -20,7 +20,7 @@ public class StockBot {
     public static void main(String[] args) throws FileNotFoundException {
         JDA builder = null;
         String authKey;
-        boolean exists = Files.exists(Path.of(System.getProperty("user.dir")+ File.separator+"key.txt"));
+        boolean exists = Files.exists(Path.of(System.getProperty("user.dir")+ File.separator+"stockBot.txt"));
 
         //if auth key is not found in files ask for one
         if(!exists){
@@ -32,7 +32,7 @@ public class StockBot {
             printer.close();
         }else{
             //if found, read it
-            Scanner scn =new Scanner(new File("key.txt"));
+            Scanner scn =new Scanner(new File("stockBot.txt"));
             authKey=scn.next();
         }
 
