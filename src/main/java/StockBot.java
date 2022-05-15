@@ -1,5 +1,6 @@
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
+import net.dv8tion.jda.api.entities.MessageActivity;
 import net.dv8tion.jda.api.interactions.commands.build.Commands;
 import net.dv8tion.jda.api.interactions.commands.build.OptionData;
 import net.dv8tion.jda.api.requests.restaction.CommandListUpdateAction;
@@ -26,7 +27,7 @@ public class StockBot {
             Scanner scn = new Scanner(System.in);
             System.out.print("Enter bot auth key: ");
             authKey = scn.nextLine();
-            PrintWriter printer=  new PrintWriter("key.txt");
+            PrintWriter printer=  new PrintWriter("stockBot.txt");
             printer.print(authKey);
             printer.close();
         }else{
